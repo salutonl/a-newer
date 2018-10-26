@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:kongqw="http://schemas.android.com/apk/res-auto"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true">
+
+    <WebView
+        android:id="@+id/video_car"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#eeeeee"
+        android:clickable="false">
+
+
+    </WebView>
+    <EditText
+        android:layout_marginTop="15dp"
+        android:background="#50000000"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:hint="输入服务器ip地址"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/edt_webip"/>
+    <EditText
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/edt_webip"
+        android:background="#50000000"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:hint="输入摄像机ip地址"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/edt_ip"/>
+    <Button
+        android:layout_marginTop="15dp"
+        android:background="#50000000"
+        android:layout_below="@+id/edt_ip"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:id="@+id/btn_ip"
+        android:text="提交ip"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true">
+
+        <TextView
+            android:background="@drawable/roundrect_stopcar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="抓\n取"
+            android:textSize="50sp"
+            android:id="@+id/tv_catch"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="方向"
+            android:textSize="100sp"
+            android:id="@+id/log_left"
+            android:layout_marginEnd="17dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arror_right"
+            android:id="@+id/arm_up"
+            android:background="@drawable/round_controler"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:background="@drawable/roundrect_stopcar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="松\n开"
+            android:textSize="50sp"
+            android:id="@+id/tv_release"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/log_left"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp" />
+        <TextView
+
+            android:background="@drawable/roundrect_stopcar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="拍摄"
+            android:textSize="50sp"
+            android:id="@+id/takeshot"
+            android:textColor="#ffffff"
+
+            android:layout_below="@+id/arm_dwon"
+             />
+        <TextView
+
+            android:background="@drawable/roundrect_stopcar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="停止"
+            android:textSize="50sp"
+            android:id="@+id/stop"
+            android:textColor="#ffffff"
+
+            android:layout_below="@+id/arm_dwon"
+            android:layout_alignParentEnd="true"/>
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arror_right"
+            android:id="@+id/arm_dwon"
+            android:background="@drawable/round_controler"
+            android:layout_below="@+id/rockerView_left"
+            android:layout_alignStart="@+id/arm_up" />
+
+
+
+
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_controler"
+            android:src="@drawable/arror_left"
+            android:paddingLeft="10dp"
+            android:id="@+id/arm_left"
+            android:layout_below="@+id/tv_catch"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="50dp" />
+
+        <com.example.doge.test.RockerView
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:id="@+id/rockerView_left"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            kongqw:areaBackground="#50000000"
+            kongqw:rockerBackground="#4bc7c7"
+            kongqw:rockerRadius="50dp"
+            android:layout_below="@+id/arm_up"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_controler"
+            android:src="@drawable/arror_right"
+            android:layout_marginRight="11dp"
+            android:id="@+id/arm_right"
+            android:layout_centerVertical="true"
+            android:layout_alignEnd="@+id/tv_release"
+            android:layout_marginEnd="11dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

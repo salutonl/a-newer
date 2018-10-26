@@ -1,0 +1,48 @@
+<resources>
+
+        <style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+            <!-- Customize your theme here. -->
+            <item name="colorPrimary">@color/primary</item>
+            <item name="colorPrimaryDark">@color/primary_dark</item>
+            <item name="colorAccent">#FF4081</item>
+        </style>
+
+    <!--沉浸式-->
+        <style name="TranslucentTheme" parent="AppTheme">
+          </style>
+
+        <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">#FF4081</item>
+
+    </style>
+
+    <!--占位-->
+    <style name="zhanwei">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">20dip</item>
+    </style>
+
+    <style name="tab_buttom_style">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">@drawable/tab_buttom_color</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:button">@null</item>
+
+    </style>
+    <style name="FullScreenTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+</resources>
